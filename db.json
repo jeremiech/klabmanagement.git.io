@@ -1,0 +1,25 @@
+{
+  "Tasks": [
+    {
+      "id": "da53c343-c628-4ec8-846a-95066fdd6b46",
+      "title": "great",
+      "completed": false
+    }
+  ],
+  "Employee": [
+    {
+      "id": "UGUwZL",
+      "name": "Kirabo",
+      "email": "kiki@gmail.com",
+      "phone": "0783738831",
+      "password": "10101"
+    },
+    {
+      "id": "CksMXJ",
+      "name": "DianaMarc",
+      "email": "dian@gmail.com",
+      "phone": "0783839393",
+      "position": "Manager"
+    }
+  ]
+}

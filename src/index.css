@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+h5{
+    border:#c4c4c4 1px solid;
+    background-color: #c4c4c4;
+    margin: 10px 0px;
+    padding:5px;
+    border-radius: 5px;
+}
+
+.navBar{
+  height:80px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px  #c4c4c4;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+
+.navBar ul {
+  display: inline-block;
+}
+
+.navBar ul li{
+  display: inline-block;
+  margin: 0px 10px;
+}
+
+.navbar .klab{
+  position: absolute;
+  height:50%;
+
+}
+
+.navBar .link:hover{
+  border-bottom: 2px solid #ccc;
+  transition: 0.5s ease;
+}
+
+.container {
+  max-width: 500px;
+  margin: 100px auto;
+  overflow: auto;
+  min-height: 300px;
+  border: 1px solid steelblue;
+  padding: 30px;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  background: gray;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 15px;
+  font-family: inherit;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.task {
+  background: #e7e6e6;
+  margin: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.task.reminder {
+  border-left: 5px solid green;
+}
+
+.task h5 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.task .edit{
+  position: absolute;
+  right:40px;
+}
+
+.add-form {
+  margin-bottom: 40px;
+}
+
+.form-control {
+  margin: 20px 0;
+}
+
+.form-control label {
+  display: inline-block;
+}
+
+.form-control input {
+  width: 80%;
+  height: 40px;
+  margin: 5px;
+  padding: 3px 7px;
+  font-size: 17px;
+}
+
+.form-control-check {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form-control-check label {
+  flex: 1;
+}
+
+.form-control-check input {
+  flex: 2;
+  height: 40px;
+}
+
+footer {
+  margin-top: 30px;
+  text-align: center;
+}
+
+/* register section */
+.register{
+  margin-top: -40px;
+}
+
+.register .container .form{
+  display: flex;
+  flex-direction: column;
+  padding: 20px 30px;
+}
+
+.register .container .form label{
+  font-size: 15px;
+  margin: 10px 15% 5px;
+}
+
+.register .container .form input{
+  height: 30px;
+  width: 70%;
+  margin: 0px auto;
+}
+
+
+.register .container .form button{
+  margin-top: 30px;
+}
+
+/* edit input for todo */
+.intodo{
+  font-size: 30;
+  height:40px;
+  width: 330px;
+  margin-left: 20px;
+}
+
+
+/* admin section */
+
+.admin{
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.admin h2{
+  margin: 20px;
+}
+
+.admin li:nth-child(odd){
+  background-color: #e7e6e6;
+}
+
+.admin .dash{
+  display: flex;
+  flex-direction: row;
+  padding:5px 0px 0px 6px ;
+  height: 40px;
+}
+
+.dheader{
+  width: 100%;
+  height: auto;
+  padding-left: 10px;
+  background: gray;
+  
+
+}
+.admin .dash h4{
+  flex: 1;
+}
+.editbtn{
+  padding-left: 10px;
+  font-weight: 30px;
+  color:black
+}
+
+.logp{
+  min-width: 150px;
+  background-color: linear-gradient(to top,rbga(0,0,0,0.5)50%,rbga(0,0,0,0.5)50%);
+  height: 120px;
+  display: flex;
+  align-items: center;
+
+}
+
+.blogin{
+  padding: 12px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.blogin{
+  display: flex;
+  justify-content: space-between;
+
+  
+}
+.blogin a{
+  font-size: 18px;
+  color:black;
+  margin-top: 15px;
+
+
+
+
+
+}
+
+.blogin a:hover{
+  outline: none;
+  color: black;
+  border-bottom: 0.5px solid black;
+  
+
+}
+.logInput{
+width: 100%;
+height: 35px;
+
+}
+.logInput:hover{
+  outline: none;
+}
+.bb{
+  width: 100%;
+  height: 40px;
+  margin: auto;
+  margin-top: 20px;
+  background: black;
+  color:white;
+  
+}
+.bb:hover{
+/* transform: scale(0.98cm); */
+background: transparent;
+border: 0.5px solid black;
+cursor: pointer;
+color:black;
+}
+.social{
+  display: flex;
+  gap:20px;
+}
+.convertResult>button{
+  float: left;
+  display: flex;
+  justify-content: space-between;
+  font-size:50px;
+  margin-left:20px;
+  
+
+}
+.lb{
+  font-size: 18px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.ifacebook,.iWhat,.iInsta{
+  color:black;
+}
+.ifacebook:hover{
+  color:blue;
+}
+.iInsta:hover{
+  color:crimson
+}
+.iWhat:hover{
+  color:darkseagreen;
+}
+.logs{
+  max-width: 300px;
+  height: 400px;
+  border:0.5px solid rgba(0,0,0,0.5);
+  box-shadow: 0px 5px 0px;
+
+}
+.mb-3{
+  display: flex;
+  
+}
