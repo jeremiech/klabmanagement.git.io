@@ -21,13 +21,7 @@ const NavBar = () => {
             <li><Link to="/todo" className='link'>Add todo</Link></li>
             <li><Link to="/login" className='link'>Log In</Link></li>
 
-            {/* <li> 
-            <div className='convertResult'>
-            <button onClick={pdfDownloadFile}><TiExport /></button> 
-           <button><SiMicrosoftexcel /></button>
-            
-            </div>
-        </li> */}
+    
         </ul>
   
     </div>

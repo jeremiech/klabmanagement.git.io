@@ -3,28 +3,29 @@ import { createAsyncThunk,createSlice } from "@reduxjs/toolkit";
 
 //fetchData
 
-export const fetchEmployees=createAsyncThunk(`employees/fetchEmployees`,async (_,{dataValue})=>{
+export const fetchEmployees=createAsyncThunk(`employees/fetchEmployees`,async (_,{rejectWithValue})=>{
     const response=await axios.get('http://localhost:8000/Employee')
     try{
         return response.data
 } 
   catch(error){
     if(!response.error){
-        return dataValue(error)
+        return rejectWithValue(error)
     }
-    return dataValue(error.response.data)
+    return rejectWithValue(error.response.data)
 } 
 });
-export const deleteEmployee=createAsyncThunk('employee/deleteEmployee',async (id,{dataValue})=>{
+//delete data API
+export const deleteEmployee=createAsyncThunk('employee/deleteEmployee',async (id,{rejectWithValue})=>{
     try{
         const response=await axios.delete(`http://localhost:8000/Employee/${id}`)
         return response.data
 
     }catch(error){
         if(!error.response){
-            return dataValue(error)
+            return rejectWithValue(error)
         }
-        return dataValue(error.response.data)
+        return rejectWithValue(error.response.data)
     }
 })
 
@@ -45,25 +46,6 @@ export const createEmployees=createAsyncThunk(`employees/createEmployees`,async(
     } )
 
 
-//     //updating employee
-//     export const updateEmployees=createAsyncThunk(`${namespace}/updateEmployees`,async(data,{dataValue})=>{
-//     try{
-//         let id=data.id
-//         let newData={
-//             name:data.name,
-//             role:data.role
-
-//         }
-//         const response=await axios.patch(`${url}/${id}`,newData)
-//         return response.data
-//     }catch(error){
-//         if(!error.response){
-//             return dataValue(error)
-//         }
-//         return  dataValue(error.response.data)
-
-//     }
-//     })
 
 
 

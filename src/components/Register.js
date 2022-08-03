@@ -35,7 +35,8 @@ const Register = () => {
   // }
 
 
-const handleSubmit=()=>{
+const handleSubmit=(e)=>{
+e.preventDefault()
 const data={
       id: uid(),
       name:inputName,
@@ -43,23 +44,13 @@ const data={
       phone:inputPhone,
       position:positon
 }
+console.log('found data',data)
 dispatch(createEmployees(data))
 }
 
 
 
-  // const onSubmit = () =>{
-  //   axios.post(url,{
-  //     id: uid(),
-  //     name:inputName,
-  //     email:inputEmail,
-  //     phone:inputPhone,
-  //     // password:inputPassword,
-  //     position:positon
-  //   }).then(() =>{
-      
-  //   })
-  // }
+
     
 
   return (

@@ -1,6 +1,6 @@
 {
   "name": "todo",
-  "homepage": "https://github.com/jeremiech/klabmanagement.github.io.git",
+  "homepage": "https://github.com/jeremiech/klabmanagement.git.io.git",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -11,6 +11,7 @@
     "axios": "^0.27.2",
     "bootstrap": "^5.1.3",
     "export-to-csv": "^0.2.1",
+    "gh-pages": "^4.0.0",
     "json-server": "^0.17.0",
     "jspdf": "^2.5.1",
     "jspdf-autotable": "^3.5.25",
@@ -27,11 +28,11 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "deploy": "gh-pages -d build ",
-    "predeploy": "npm run build"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
@@ -50,8 +51,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "gh-pages": "^4.0.0"
   }
 }

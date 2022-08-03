@@ -8,24 +8,25 @@ import {MdRemoveCircle} from 'react-icons/md'
 import {FaEdit} from 'react-icons/fa'
 import { CSVLink} from "react-csv";
 import { Link } from 'react-router-dom';
-import { useSelector,useDispatch } from 'react-redux';
-import  {employeeSelector,fetchEmployees,deleteEmployee} from '../features/Employees'
+import { useDispatch } from 'react-redux';
+import  {fetchEmployees,deleteEmployee} from '../features/Employees'
+// import { ExportToCsv } from 'export-to-csv';
 
-
-
-const Admin = () => {
+ const Admin = () => {
 
   const [ tasks, setTasks ] = useState([]);
   const [isLoading , setisLoading] = useState(true)
-const [deleting,setDeleting]=useState(null)
+// const [deleting,setDeleting]=useState(null)
 const docs=new jsPDF();
   const url = "http://localhost:8000/Employee";
  
 //fetch data with redux
 
-const {employees}=useSelector(employeeSelector);
+// const employees=useSelector(employeeSelector);
+// console.log(employees)
 
 const dispatch=useDispatch();
+
 useEffect(()=>{
   dispatch(fetchEmployees())
 },[dispatch])
@@ -38,13 +39,15 @@ useEffect(()=>{
   dispatch(deleteEmployee)
 },[dispatch])
 
+useEffect(()=>{
+  axios.get(url).then((res)=>{
+      setTasks(res.data);
+      setisLoading (false);
+  })
+},[tasks])
 
 
 
-// const onDeleting=id=>{
-//   dispatch(deleteEmployee(id))
-
-// }
 
 
 
@@ -63,29 +66,19 @@ useEffect(()=>{
   });
   docs.save('employee.pdf')
   }
-const expExcels=()=>{
-  let arr=[]
-for(let i=0;i<tasks;i++){
-  let arr=[['#','Name', 'Email','Mobile', 'Position']]
-  arr.push(Object.values(tasks[i]))
-}
-return arr
-}
-useEffect(()=>{
-  axios.get(url).then((res)=>{
-      setTasks(res.data);
-      setisLoading (false);
-  })
-},[tasks])
+function expExcels(){
 
-useEffect(()=>{
-  axios.get(`${url}`).then(res=>{
-    setDeleting(res.data)
+let data=[['#','Name', 'Email','Mobile', 'Position']]
+for(let i=0;i<tasks.length;i++){
+  data.push(Object.values(tasks[i]))
+}
+return data;
+}
+// console.log(expExcels)
 
-  })
-},[deleting])
 
 const exceldt=expExcels()
+console.log(exceldt)
 
   return (
     <div className='admin'>
@@ -108,15 +101,7 @@ const exceldt=expExcels()
         {!isLoading ? (tasks.map((task) =>{ 
           const { id,name,email,phone,position } = task;
         
-          const deleteEmployee=()=>{
-            let choice=window.confirm(`Do You want to delete ${name}`)
-            if(choice)
-            axios.delete(`${url}/${id}`).then(()=>{
-              alert(`Employee ${name} Has Deleted Successfully`)
-              setDeleting(null)
-            })
-          }
-          if(!deleting) return null
+  
         return(
           <li key ={task.id} className="line dash">
             <h4>{id}</h4>
@@ -125,7 +110,7 @@ const exceldt=expExcels()
             <h4>{phone}</h4>
             <h4>{position || 'Normal'}</h4>
             <h4 className='editbtn'>
-              <button onClick={deleteEmployee} style={{cursor:"pointer",outline:"none",textAlign:"center"}} >
+              <button onClick={()=>dispatch(deleteEmployee(id))} style={{cursor:"pointer",outline:"none",textAlign:"center"}} >
                 <MdRemoveCircle style={{marginLeft:"10px",fontSize:"30px",color:"black"}} /></button></h4>
                 <h4><Link style={{cursor:"pointer",outline:"none",textAlign:"center"}}  to="viewing"><FaEdit style={{marginLeft:"10px",fontSize:"30px",color:"black"}}  /></Link></h4>
 
@@ -139,5 +124,6 @@ const exceldt=expExcels()
     </div>
   )
 }
+
 
 export default Admin

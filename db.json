@@ -4,22 +4,27 @@
       "id": "da53c343-c628-4ec8-846a-95066fdd6b46",
       "title": "great",
       "completed": false
+    },
+    {
+      "id": "8075e5bc-97c5-47af-9fb4-ae1f0a1f957f",
+      "title": "giti Blue",
+      "completed": false
     }
   ],
   "Employee": [
     {
-      "id": "UGUwZL",
-      "name": "Kirabo",
-      "email": "kiki@gmail.com",
-      "phone": "0783738831",
-      "password": "10101"
+      "id": "NvA4AY",
+      "name": "Adona",
+      "email": "ado@gmail.com",
+      "phone": "0782738383",
+      "position": "secretary"
     },
     {
-      "id": "CksMXJ",
-      "name": "DianaMarc",
-      "email": "dian@gmail.com",
-      "phone": "0783839393",
-      "position": "Manager"
+      "id": "8pyzMp",
+      "name": "mugiraneza",
+      "email": "mugir@gmail.com",
+      "phone": "0783838393",
+      "position": "managre"
     }
   ]
 }
