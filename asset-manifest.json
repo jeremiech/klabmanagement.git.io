@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/jeremiech/klabmanagement.git.io.git/static/css/main.39ffbd3b.css",
+    "main.js": "/jeremiech/klabmanagement.git.io.git/static/js/main.270986b4.js",
+    "static/js/498.ef144f99.chunk.js": "/jeremiech/klabmanagement.git.io.git/static/js/498.ef144f99.chunk.js",
+    "static/js/703.aff24be0.chunk.js": "/jeremiech/klabmanagement.git.io.git/static/js/703.aff24be0.chunk.js",
+    "static/js/323.f5f9b9a5.chunk.js": "/jeremiech/klabmanagement.git.io.git/static/js/323.f5f9b9a5.chunk.js",
+    "static/media/klab.jpg": "/jeremiech/klabmanagement.git.io.git/static/media/klab.9653de4417e6315ecfb5.jpg",
+    "index.html": "/jeremiech/klabmanagement.git.io.git/index.html",
+    "main.39ffbd3b.css.map": "/jeremiech/klabmanagement.git.io.git/static/css/main.39ffbd3b.css.map",
+    "main.270986b4.js.map": "/jeremiech/klabmanagement.git.io.git/static/js/main.270986b4.js.map",
+    "498.ef144f99.chunk.js.map": "/jeremiech/klabmanagement.git.io.git/static/js/498.ef144f99.chunk.js.map",
+    "703.aff24be0.chunk.js.map": "/jeremiech/klabmanagement.git.io.git/static/js/703.aff24be0.chunk.js.map",
+    "323.f5f9b9a5.chunk.js.map": "/jeremiech/klabmanagement.git.io.git/static/js/323.f5f9b9a5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.39ffbd3b.css",
+    "static/js/main.270986b4.js"
+  ]
+}
